@@ -25,5 +25,5 @@ func main() {
 	r.Use(middlewares.JWTmiddleware)
 	api.Routes(r)
 	PORT := os.Getenv("PORT")
-	http.ListenAndServe("0.0.0.0" + PORT, r)
+	http.ListenAndServe("0.0.0.0:" + PORT, r)
 }
